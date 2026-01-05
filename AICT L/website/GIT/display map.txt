@@ -1,0 +1,92 @@
+#include<iostream>
+using namespace std;
+int size , x, y;
+void map(int size,int x,int y );//x,y=x-y coordinates,size=size of map,r=row loop, c=cloumn loop//
+void map(int size,int x,int y){
+for(int r=1;r<=size;r++){
+	
+	for(int c=1;c<=r;c++){
+		
+		if(r==x&&c==y){
+			cout<<"x";
+		}
+		else 
+		cout<<"-";
+	}
+	cout<<endl;
+}
+}
+int main(){
+	
+	cout<<"Enter a map size (5-9) both inclusive: \n";
+	cin>>size;
+   
+   	cout<<size<<endl;
+
+
+ do{
+  cout<<"Enter  intial location of (x) coordinates (row-column):"<<endl;
+  cin>>x>>y;
+  if(x<=size&&y<=size){
+  	cout<<"valid"<<endl;
+  }	else
+  cout<<"Enter valid cocrdinates"<<endl;
+ }while(x>size||y>size);
+map(size,x,y);  // function callling//
+int num=0;// num = option no//
+while(num!=4){
+	cout<<"Menu option:"<<endl;
+	cout<<"1.Update treasure coordinates(row/ column)"<<endl;
+	cout<<"2.Shift x left or right"<<endl;
+	cout<<"3.Shift x up or down"<<endl;
+	cout<<"4.Exit prgram"<<endl;
+	cout<<"Choose the option"<<endl;
+	cin>>num;
+	switch(num){
+		case 1:
+			int r1,c1; //r1=updated row,c1=updated column///
+			do{
+			cout<<"Enter row and column coordinates"<<endl;
+			cin>>r1>>c1;
+			x=r1;
+			y=c1;
+			if(r1>size||c1>size)
+			cout<<"Invalid coordinates"<<endl;}
+			while(r1>size||c1>size);
+	        
+			
+			map(size,x,y);// function callling//
+			break;
+		case 2:
+			int shiftColumn; // shiftColumn= changing in column having same row //
+			do{
+			cout<<"Shift x left or right (+ve for right and-ve for left)"<<endl;
+			cin>>shiftColumn;
+			shiftColumn=shiftColumn+y;
+			y=shiftColumn;
+			if(shiftColumn>size)
+			cout<<"invalid shifting";
+		}while(shiftColumn>size);
+		map(size,x,y);  // function callling//
+		break;
+		case 3:
+			int shiftRow;  // shiftRow= changing in row having same column //
+			do{
+			cout<<"Shift x left or right (+ve for down and-ve for up)"<<endl;
+			cin>>shiftRow;
+			shiftRow =shiftRow+x;
+			x=shiftRow;
+			if(shiftRow>size)
+			cout<<"invalid shifting";
+		}while(shiftRow>size);
+		  
+		   map(size,x,y);  // function callling//
+		   break;
+	    case 4:
+	    	cout<<"Exiting Program"<<endl;
+			break;
+			
+	}
+	 
+}
+}

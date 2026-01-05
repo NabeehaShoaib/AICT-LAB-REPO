@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+float sum (float num1,float num2);
+float sum (float num1,float num2)
+{
+	float c;
+	c =num1+num2;
+	return c;
+}
+float sub (float num1,float num2);
+float sub (float num1,float num2)
+{
+	float c;
+	c =num1-num2;
+	return c;
+}
+float multiply (float num1,float num2);
+float multiply (float num1,float num2)
+{
+	float c;
+	c =num1*num2;
+	return c;
+}
+float div (float num1,float num2);
+float div (float num1,float num2)
+{
+	float c;
+	c =num1/num2;
+	return c;
+}
+int main()
+{
+float a,b,d,f;
+cout<<" Enter two numers \n";
+cin>>a>>b;
+char e;
+cout<<"Enter the operator (+,-,*,/)\n";
+cin>>e;
+if(e == '+'){
+	f= sum(a,b);
+	cout<<"Sum=\n"<<f;
+}
+if(e == '-'){
+	f= sub(a,b);
+	cout<<"Subtraction=\n"<<f;
+}
+if(e == '*'){
+	f= multiply(a,b);
+	cout<<"Multiply=\n"<<f;
+}
+if(e == '/'){
+	f= div(a,b);
+	cout<<"Division=\n"<<f;
+}
+}

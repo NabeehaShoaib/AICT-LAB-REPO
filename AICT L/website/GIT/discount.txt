@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int dis (string a,int b);
+int dis (string a,int b){//a=day name[dummy variable],b=total amount//
+	if(a=="sunday"||a=="Sunday"){
+		int c,d;
+		c=b*0.10;
+		d=b-c;//c=discount amount,d=payable amount//
+	   cout<<"10% DISCOUNT applied ="<<d<<"$";}
+	else{
+		
+		int g,h;
+		
+		g=b*0.05;//g=discount5%,h=payable amountof5%//
+		h=b-g;
+		cout<<"5% Discount applied="<<h<<"$";
+		}
+	}
+	int main(){
+	string e; int f;  // e= day, f=total amount//
+	while(true){
+	cout<<"\nEnter the day\n";
+	cin>>e;
+	cout<<"Enter your total amount without discount="<<"$";
+	cin>>f;
+	dis (e,f);}
+	return 0;
+}

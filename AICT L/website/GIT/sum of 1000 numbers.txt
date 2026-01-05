@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int num=1,sum=0,result;
+	while (num<=1000);
+	{
+		sum=num+sum;
+		num=num+1;
+			}
+	cout<<sum;}

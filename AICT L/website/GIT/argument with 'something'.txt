@@ -1,0 +1,9 @@
+#include<iostream>
+using namespace std;
+int main(){
+	char arr[50];   //character array declaration that store 50 characters in array//
+	cout<<"Enter the argument 'a':"<<endl;
+	cin.getline(arr,50);  // to get and store spaces// 
+	cout<<"Result: Something "<<arr; // displaying complete array with 'something'//
+	return 0;
+}

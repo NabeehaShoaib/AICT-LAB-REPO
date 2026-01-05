@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+void check (char a);
+void check (char a){
+	if (a>='A'&&a<='Z')
+	cout<<"You have entered="<<a;
+	else if(a>='a'&&a<='z')
+	cout<<"You have entered="<<a;
+	else
+	cout<<"Enter a alphabet character\n";
+}
+int main(){
+	char a;
+	cout<<"Enter a character(A/a)\n";
+	cin>>a;
+	check (a);
+	return 0;
+}

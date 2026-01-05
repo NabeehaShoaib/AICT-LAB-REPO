@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int totalDigits(int num);
+int totalDigits(int num){
+	int i;
+	if (num==0){
+		i=1;
+	}
+	else if(num<0)
+	{
+		num=-num;
+	}
+	while (num>0){
+		    num=num/10;
+		    i++;
+	}
+	return i;
+}
+int main(){
+	int num,b;
+	cout<<"Enter the number\n";
+	cin>>num;
+	b=totalDigits(num);
+	cout<<"Total digit number is:"<<b<<endl;
+	return 0;
+}

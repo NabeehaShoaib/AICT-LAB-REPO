@@ -1,0 +1,38 @@
+body{
+    background :linear-gradient(to right, red,orange,red,black);
+}
+.side{
+   height: 100px;
+    width: 150px;
+    background-color:none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+.side a{
+    height: 80px;
+    color: white;
+    display: block;
+    background-color: black;
+    padding: 15px 20px ;
+    margin: 10px;
+}
+.heading{
+
+    background-color: none;
+    text-transform: capitalize;
+    text-align: center;
+    
+}
+p{
+    color:black;
+    text-align: center;
+}
+.heading h2{
+    display: inline;
+}
+.two{
+    color: white;
+}

@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+void differ(int A[],int size1,int B[],int size2);   //function prototype//
+void differ(int A[],int size1,int B[],int size2){    //functio definition//
+	bool a=false;                             //a is bool type variable//      
+	for(int i=0;i<size1;i++){
+	    a=false;
+		for(int j=0;j<size2;j++){
+			if(A[i]==B[j]){  // if values of both array are same so'a'will be true so the condition in outer loop become false//
+				a=true;
+				break;
+			}}
+		if(!a){   // if values of both array are not same so'a'will be false so the condition in outer loop become true and the number will be displayed//
+			cout<<A[i]<<",";
+		}}}	
+int main(){
+		int size1;
+	cout<<"Enter the size of 1st array:"<<endl; // size1=size of 1st array,size2=size of 2nd array//
+	cin>>size1;
+	int A[size1];
+	cout<<"Enter the elements  of 1st array:"<<endl;
+	for(int i=0;i<size1;i++){  // 1st loop is used to enter the elements  of 1st array//
+		cin>>A[i];
+	}
+		int size2;
+	cout<<"Enter the size of 2nd array:"<<endl;
+	cin>>size2;
+	int B[size2];
+	cout<<"Enter the elements  of 2nd array:"<<endl; 
+	for(int j=0;j<size2;j++){                   //2nd loop is used to enter the elements  of 2nd array//
+		cin>>B[j];
+}
+cout<<"Difference:";
+	differ(A,size1,B,size2); // function calling//
+	
+}
